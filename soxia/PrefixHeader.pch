@@ -16,5 +16,11 @@
 #import <Masonry.h>
 #import <MJRefresh.h>
 #import <UIImageView+WebCache.h>
+#import <AFNetworking.h>
+#import "ApiManager.h"
+#import "MBProgressHUD+MJ.h"
+
+#define RnAccountKey @"account"
+#define RnPwdKey @"pwd"
 
 #endif /* PrefixHeader_pch */
