@@ -18,9 +18,9 @@
 #import <UIImageView+WebCache.h>
 #import <AFNetworking.h>
 #import "ApiManager.h"
-#import "MBProgressHUD+MJ.h"
+#import <MBProgressHUD.h>
 
 #define RnAccountKey @"account"
 #define RnPwdKey @"pwd"
-
+#define RnIconKey @"icon"
 #endif /* PrefixHeader_pch */

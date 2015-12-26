@@ -9,7 +9,8 @@
 #import <UIKit/UIKit.h>
 #import "RnButton.h"
 @interface RnLoginViewController : UIViewController
-@property (nonatomic,strong)NSDictionary *dic;
+@property(nonatomic, strong)NSMutableArray *datas;
+
 @property (strong, nonatomic) IBOutlet UIImageView *iconView;
 @property (strong, nonatomic) IBOutlet UIView *accountView;
 @property (strong, nonatomic) IBOutlet UITextField *accountFeild;
@@ -17,7 +18,10 @@
 
 @property (strong, nonatomic) IBOutlet UIView *pwdView;
 
+@property (strong, nonatomic) IBOutlet UIView *accountBox;
+
 @property (strong, nonatomic) IBOutlet UITextField *pwdFeild;
+- (IBAction)dropBtnClick:(id)sender;
 
 @property (strong, nonatomic) IBOutlet RnButton *loginBtn;
 - (IBAction)fogotPwdBtnClick:(id)sender;
