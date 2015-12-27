@@ -10,6 +10,7 @@
 #import "RnSettingItem.h"
 #import "RnViewCell.h"
 @interface RnSettingItemCell : RnViewCell
+//@property (nonatomic,strong)UIView *divider;
 @property(nonatomic, strong)UISwitch *switchView;
 @property(nonatomic, strong)UILabel *label;
 @property(nonatomic, strong)RnSettingItem *item;

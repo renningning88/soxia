@@ -22,7 +22,8 @@
     // Do any additional setup after loading the view.
 
     [self setMeDatas];
-    self.tableView.separatorStyle =UITableViewCellSeparatorStyleSingleLine ;
+    self.tableView.separatorStyle =UITableViewCellSeparatorStyleSingleLine;
+    
 }
 
 - (void)setMeDatas{

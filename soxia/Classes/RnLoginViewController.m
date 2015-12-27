@@ -16,6 +16,10 @@
 
 @implementation RnLoginViewController
 #pragma mark - 数据加载
+
+
+
+
 - (NSMutableArray *)datas{
     if (_datas) {
         return _datas;
@@ -32,7 +36,8 @@
 #pragma mark - 视图加载
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
-    NSLog(@"register --login self.datas ====%@",self.datas);
+//    NSLog(@"register --login self.datas ====%@",self.datas);
+    self.title = @"登录";
     self.loginBtn.enabled = NO;
     // 1 隐藏navigationbar
     [self.navigationController setNavigationBarHidden:YES];
@@ -112,37 +117,27 @@
 }
 /** 登录*/
 - (IBAction)loginBtnClick:(id)sender {
-    //    [MBProgressHUD showMessage:@"正在登录，请稍候"];
-    //        // 1 网络请求
-    //    NSString *urlStr = @"http://192.168.1.100/api/list.php";
-    //
-    //    [[ApiManager showManager] POST:urlStr parameters:nil success:^(NSDictionary *jsonDic) {
-    //        // 1 网络请求成功
-    //        [MBProgressHUD hideHUD];
-    //        NSArray *dicArray = [jsonDic objectForKey:@"results"];
-    //        [dicArray enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-    //            if ( [self.acountText.text isEqualToString:[obj objectForKey:@"acount"]]&& [self.pwdText.text isEqualToString:[obj objectForKey:@"pwd"]]) {
-    //                [self.iconView sd_setImageWithURL:[NSURL URLWithString:[obj objectForKey:@"icon"]]];
-    //              // 2 正确后进行push 操作
-    //                [self performSegueWithIdentifier:@"login" sender:nil];
-    //                NSUserDefaults *defults = [NSUserDefaults standardUserDefaults];
-    //                [defults setValue:self.accountFeild.text forKey:RnAccountKey];
-    //                [defults setValue:self.pwdFeild.text forKey:RnPwdKey];
-    //                [defults synchronize];
-    //            }
-    //        }];
-    //    } failure:^(AFHTTPRequestOperation *operation, NSError *error) {
-    //        // 2 网络请求失败
-    //        [MBProgressHUD showError:@"网络出现错误！"];
-    //    }];
+    // 1 判断用户名和密码是否正确
     
-    NSUserDefaults *defults = [NSUserDefaults standardUserDefaults];
-    [defults setObject:self.accountFeild.text forKey:RnAccountKey];
-    [defults setObject:self.pwdFeild.text forKey:RnPwdKey];
-//    [defults setObject:self.iconView.image forKey:RnIconKey];
-    [defults synchronize];
-    [self performSegueWithIdentifier:@"login" sender:nil];
-   
+    [self.datas enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+        if ([self.accountFeild.text isEqualToString:[obj objectForKey:@"account"]]&&[self.pwdFeild.text isEqualToString:[obj objectForKey:@"pwd"]]) {
+            NSUserDefaults *defults = [NSUserDefaults standardUserDefaults];
+            [defults setObject:self.accountFeild.text forKey:RnAccountKey];
+            [defults setObject:self.pwdFeild.text forKey:RnPwdKey];
+//            [defults setObject:self.iconView.image forKey:RnIconKey];
+            [defults synchronize];
+            [self performSegueWithIdentifier:@"login" sender:nil];
+            
+        }else if (![self.accountFeild.text isEqualToString:[obj objectForKey:@"account"]] &&[self.pwdFeild.text isEqualToString:[obj objectForKey:@"pwd"]]){
+        
+            [MBProgressHUD showError:@"用户名不存在"];
+            
+        
+        }else if ([self.accountFeild.text isEqualToString:[obj objectForKey:@"account"]] &&![self.pwdFeild.text isEqualToString:[obj objectForKey:@"pwd"]]){
+            [MBProgressHUD showError:@"密码不正确"];
+           
+        }
+    }];
     
     
 }

@@ -15,6 +15,10 @@
     self.imageView.bounds = CGRectMake(0, 0, 44, 44);
     self.imageView.contentMode = UIViewContentModeScaleAspectFill;
     
+    
+    CGRect tmpBounds = CGRectMake(0, 0, self.detailTextLabel.frame.size.width, 44);
+    self.detailTextLabel.bounds = tmpBounds;
+    
 }
 
 @end

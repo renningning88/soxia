@@ -31,6 +31,7 @@
     _label.font = [UIFont systemFontOfSize:14.0f];
     return _label;
 }
+
 #pragma mark - 设置内容
 - (void)setItem:(RnSettingItem *)item{
     _item = item;
@@ -71,11 +72,16 @@
     }
 
 }
+
 +(instancetype)cellWithTableView:(UITableView *)tableView{
     static NSString *ID = @"RnSettingItemCell";
     RnSettingItemCell * cell = [tableView dequeueReusableCellWithIdentifier:ID];
     if (cell == nil) {
         cell = [[RnSettingItemCell alloc] initWithStyle:UITableViewCellStyleValue1 reuseIdentifier:ID];
+//        UIView *divider = [[UIView alloc] initWithFrame:CGRectMake(0, cell.frame.size.height - 1, cell.frame.size.width, 1)];
+//        divider.backgroundColor = [UIColor grayColor];
+//        divider.alpha = 0.8;
+//        [cell.contentView addSubview:divider];
     }
 
     return cell;

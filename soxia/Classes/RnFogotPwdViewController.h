@@ -20,5 +20,6 @@
 @property (strong, nonatomic) IBOutlet UITextField *pwdFeild;
 @property(strong, nonatomic)id <RnFogotPwdViewControllerDelegate>delegate;
 - (IBAction)saveBtnClick:(RnButton *)sender;
+@property (strong, nonatomic) IBOutlet RnButton *saveBtn;
 
 @end

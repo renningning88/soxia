@@ -26,6 +26,7 @@
 
     // 1 设置navigationbar的背景图片和字体颜色
     UINavigationBar *naviBar = [UINavigationBar appearance];
+    naviBar.tintColor = [UIColor whiteColor];
     NSMutableDictionary *attr = [NSMutableDictionary dictionary];
     attr[NSForegroundColorAttributeName] = [UIColor whiteColor];
     [naviBar setTitleTextAttributes:attr];
@@ -36,6 +37,8 @@
     attr2[NSForegroundColorAttributeName] = [UIColor whiteColor];
     attr2[NSFontAttributeName] = [UIFont systemFontOfSize:15];
     [item setTitleTextAttributes:attr2 forState:UIControlStateNormal];
+    
+    
     
 }
 - (void)didReceiveMemoryWarning {

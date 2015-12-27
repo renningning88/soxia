@@ -37,7 +37,7 @@ PODS:
 DEPENDENCIES:
   - AFNetworking (~> 2.6.3)
   - Masonry (~> 0.6.3)
-  - MBProgressHUD (~> 0.7)
+  - MBProgressHUD (~> 0.6)
   - MJRefresh (~> 3.0.7)
   - PYFMDB (~> 0.0.5)
   - SDWebImage (~> 3.7.3)

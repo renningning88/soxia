@@ -26,5 +26,6 @@
 @property (strong, nonatomic) IBOutlet UILabel *warnFeild;
 @property (strong, nonatomic) IBOutlet UIImageView *iconView;
 @property(nonatomic, strong)id <RnRegisterViewControllerDelegate>delegate;
+@property (strong, nonatomic) IBOutlet RnButton *saveBtn;
 
 @end

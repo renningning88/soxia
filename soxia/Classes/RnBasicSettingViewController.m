@@ -39,6 +39,7 @@ return _datas;
 
 
 
+
 #pragma mark - Table view data source
 
 - (NSInteger)numberOfSectionsInTableView:(UITableView *)tableView {
@@ -69,11 +70,12 @@ return _datas;
 
 
 - (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     [self.tableView deselectRowAtIndexPath:indexPath animated:YES];
     NSArray *cellArray = self.datas[indexPath.section];
-    RnSettingItem *item = cellArray[indexPath.row];
+    RnSettingItem *item = [[RnSettingItem alloc ]initWithDic:cellArray[indexPath.row]];
     if ([item.type isEqualToString:@"ArrowItem"]) {
-        id vc  = [[NSClassFromString(item.vcClass) alloc] init ];
+        id vc  = [[NSClassFromString(item.vcClass) alloc] init];
         [self.navigationController pushViewController:vc animated:YES];
     }
 

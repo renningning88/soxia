@@ -5,37 +5,33 @@
 	<array>
 		<dict>
 			<key>icon</key>
+			<string></string>
+			<key>title</key>
+			<string>头像</string>
+			<key>detail</key>
 			<string>1.jpeg</string>
-			<key>title</key>
-			<string>我的账号</string>
-			<key>detail</key>
-			<string>二维码</string>
 			<key>type</key>
 			<string>ArrowItem</string>
 			<key>vcClass</key>
-			<string>RnMeInfoViewController</string>
+			<string></string>
 		</dict>
-	</array>
-	<array>
 		<dict>
 			<key>icon</key>
 			<string></string>
 			<key>title</key>
-			<string>偏好设置</string>
+			<string>用户名</string>
 			<key>detail</key>
-			<string></string>
+			<string>宁宁</string>
 			<key>type</key>
 			<string>ArrowItem</string>
 			<key>vcClass</key>
-			<string>RnPreferenceSettingViewController</string>
+			<string></string>
 		</dict>
-	</array>
-	<array>
 		<dict>
 			<key>icon</key>
 			<string></string>
 			<key>title</key>
-			<string>闹钟提醒</string>
+			<string>昵称</string>
 			<key>detail</key>
 			<string></string>
 			<key>type</key>
@@ -43,19 +39,29 @@
 			<key>vcClass</key>
 			<string></string>
 		</dict>
-	</array>
-	<array>
 		<dict>
 			<key>icon</key>
 			<string></string>
 			<key>title</key>
-			<string>设备设置</string>
+			<string>密码</string>
 			<key>detail</key>
 			<string></string>
 			<key>type</key>
 			<string>ArrowItem</string>
 			<key>vcClass</key>
-			<string>RnDeviceSettingViewController</string>
+			<string></string>
+		</dict>
+		<dict>
+			<key>icon</key>
+			<string></string>
+			<key>title</key>
+			<string>性别</string>
+			<key>detail</key>
+			<string></string>
+			<key>type</key>
+			<string>ArrowItem</string>
+			<key>vcClass</key>
+			<string></string>
 		</dict>
 	</array>
 	<array>
@@ -63,13 +69,41 @@
 			<key>icon</key>
 			<string></string>
 			<key>title</key>
-			<string>关于App</string>
+			<string>手机号</string>
 			<key>detail</key>
 			<string></string>
 			<key>type</key>
 			<string>ArrowItem</string>
 			<key>vcClass</key>
-			<string>RnAboutAppSettingViewController</string>
+			<string></string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>icon</key>
+			<string></string>
+			<key>title</key>
+			<string>生日</string>
+			<key>detail</key>
+			<string></string>
+			<key>type</key>
+			<string>ArrowItem</string>
+			<key>vcClass</key>
+			<string></string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>icon</key>
+			<string></string>
+			<key>title</key>
+			<string>学校</string>
+			<key>detail</key>
+			<string></string>
+			<key>type</key>
+			<string>ArrowItem</string>
+			<key>vcClass</key>
+			<string></string>
 		</dict>
 	</array>
 </array>

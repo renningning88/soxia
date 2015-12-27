@@ -5,37 +5,9 @@
 	<array>
 		<dict>
 			<key>icon</key>
-			<string>1.jpeg</string>
-			<key>title</key>
-			<string>我的账号</string>
-			<key>detail</key>
-			<string>二维码</string>
-			<key>type</key>
-			<string>ArrowItem</string>
-			<key>vcClass</key>
-			<string>RnMeInfoViewController</string>
-		</dict>
-	</array>
-	<array>
-		<dict>
-			<key>icon</key>
 			<string></string>
 			<key>title</key>
-			<string>偏好设置</string>
-			<key>detail</key>
-			<string></string>
-			<key>type</key>
-			<string>ArrowItem</string>
-			<key>vcClass</key>
-			<string>RnPreferenceSettingViewController</string>
-		</dict>
-	</array>
-	<array>
-		<dict>
-			<key>icon</key>
-			<string></string>
-			<key>title</key>
-			<string>闹钟提醒</string>
+			<string>音乐偏好</string>
 			<key>detail</key>
 			<string></string>
 			<key>type</key>
@@ -49,13 +21,13 @@
 			<key>icon</key>
 			<string></string>
 			<key>title</key>
-			<string>设备设置</string>
+			<string>新闻偏好</string>
 			<key>detail</key>
 			<string></string>
 			<key>type</key>
 			<string>ArrowItem</string>
 			<key>vcClass</key>
-			<string>RnDeviceSettingViewController</string>
+			<string></string>
 		</dict>
 	</array>
 	<array>
@@ -63,13 +35,27 @@
 			<key>icon</key>
 			<string></string>
 			<key>title</key>
-			<string>关于App</string>
+			<string>段子偏好</string>
 			<key>detail</key>
 			<string></string>
 			<key>type</key>
 			<string>ArrowItem</string>
 			<key>vcClass</key>
-			<string>RnAboutAppSettingViewController</string>
+			<string></string>
+		</dict>
+	</array>
+	<array>
+		<dict>
+			<key>icon</key>
+			<string></string>
+			<key>title</key>
+			<string>个人偏好</string>
+			<key>detail</key>
+			<string></string>
+			<key>type</key>
+			<string>ArrowItem</string>
+			<key>vcClass</key>
+			<string></string>
 		</dict>
 	</array>
 </array>

@@ -16,7 +16,22 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    [self.navigationController setNavigationBarHidden:NO];
+    self.title = @"设置新密码";
+    self.saveBtn.enabled = NO;
     // Do any additional setup after loading the view from its nib.
+    // 监听
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textChange) name:UITextFieldTextDidChangeNotification object:self.accountFeild];
+    [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textChange) name:UITextFieldTextDidChangeNotification object:self.pwdFeild];
+}
+- (void)dealloc{
+    [[NSNotificationCenter defaultCenter] removeObserver:self];
+    
+}
+
+- (void)textChange{
+    
+    self.saveBtn.enabled = (self.accountFeild.text.length > 0 && self.pwdFeild.text.length > 0);
 }
 
 - (void)didReceiveMemoryWarning {
