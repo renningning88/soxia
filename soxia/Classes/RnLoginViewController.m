@@ -17,9 +17,6 @@
 @implementation RnLoginViewController
 #pragma mark - 数据加载
 
-
-
-
 - (NSMutableArray *)datas{
     if (_datas) {
         return _datas;
@@ -32,11 +29,11 @@
 }
 
 
-
 #pragma mark - 视图加载
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 //    NSLog(@"register --login self.datas ====%@",self.datas);
+    
     self.title = @"登录";
     self.loginBtn.enabled = NO;
     // 1 隐藏navigationbar
@@ -90,6 +87,7 @@
 - (IBAction)fogotPwdBtnClick:(id)sender {
     RnFogotPwdViewController *vc = [[RnFogotPwdViewController alloc] init];
     vc.datas = self.datas;
+    
     [self performSegueWithIdentifier:@"fogotpwd" sender:nil];
 }
 
@@ -106,6 +104,7 @@
         RnRegisterViewController *vc = segue.destinationViewController;
         vc.datas = self.datas;
         vc.delegate = self;
+        
     }else if ([segue.identifier isEqualToString:@"fogotpwd"]){
     
         RnFogotPwdViewController *vc = segue.destinationViewController;
@@ -115,10 +114,10 @@
 
 
 }
-/** 登录*/
+/** 登录==========================================网络请求未完成*/
 - (IBAction)loginBtnClick:(id)sender {
     // 1 判断用户名和密码是否正确
-    
+    // 此处应为网络请求；
     [self.datas enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
         if ([self.accountFeild.text isEqualToString:[obj objectForKey:@"account"]]&&[self.pwdFeild.text isEqualToString:[obj objectForKey:@"pwd"]]) {
             NSUserDefaults *defults = [NSUserDefaults standardUserDefaults];

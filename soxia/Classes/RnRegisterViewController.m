@@ -54,12 +54,18 @@
                 
             }
         }
-    NSMutableDictionary *obj = [NSMutableDictionary dictionary];
-    [obj setObject:self.accountFeild.text forKey:@"account"];
-//    [obj setObject:self.mailFeild.text forKey:@"mail"];
-    [obj setObject:self.pwdFeild.text forKey:@"pwd"];
-    [obj setObject:self.iconView.image forKey:@"icon"];
-    [self.datas addObject:obj];
+//    NSMutableDictionary *obj = [NSMutableDictionary dictionary];
+//    [obj setObject:self.accountFeild.text forKey:@"account"];
+////    [obj setObject:self.mailFeild.text forKey:@"mail"];
+//    [obj setObject:self.pwdFeild.text forKey:@"pwd"];
+//    [obj setObject:self.iconView.image forKey:@"icon"];
+//    [self.datas addObject:obj];
+    NSDictionary *data = @{
+                           @"account":self.accountFeild.text,
+                           @"pwd":self.pwdFeild.text,
+                           
+                           };
+    [self.accountTable addFields:data];
     // 3 隐藏警告
     self.warnFeild.hidden = YES;
     

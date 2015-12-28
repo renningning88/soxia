@@ -17,7 +17,9 @@
 
 #import <UIKit/UIKit.h>
 #import "RnButton.h"
+#import "AccountTable.h"
 @interface RnRegisterViewController : UIViewController
+@property(nonatomic ,strong)AccountTable *accountTable;
 @property(nonatomic, strong)NSMutableArray *datas;
 @property (strong, nonatomic) IBOutlet UITextField *accountFeild;
 @property (strong, nonatomic) IBOutlet UITextField *mailFeild;

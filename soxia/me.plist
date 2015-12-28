@@ -61,7 +61,7 @@
 			<key>type</key>
 			<string>ArrowItem</string>
 			<key>vcClass</key>
-			<string></string>
+			<string>RnMeSexSettingViewController</string>
 		</dict>
 	</array>
 	<array>
