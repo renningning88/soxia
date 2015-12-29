@@ -21,27 +21,19 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
 
-    [self setMeDatas];
+    [self setUpDatas:@"setting.plist"];
+
     self.tableView.separatorStyle =UITableViewCellSeparatorStyleSingleLine;
-    
+    NSLog(@"viewDidLoad%lu",(unsigned long)self.datas.count);
 }
 
-- (void)setMeDatas{
-//    NSMutableArray *meDatas = [NSMutableArray array];
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"setting.plist" ofType:nil];
-    NSArray *dicArray = [NSArray arrayWithContentsOfFile:path];
-    
-    for (NSArray *arr in dicArray) {
-        NSMutableArray *dataArray = [NSMutableArray array];
-        [arr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            RnSettingItem *item = [[RnSettingItem alloc] initWithDic:obj];
-            [dataArray addObject:item];
-        }];
-        [self.datas addObject:arr];
-    }
-
-}
-
+//- (void)viewDidAppear:(BOOL)animated{
+//    [super viewDidAppear:animated];
+//    [self setUpDatas:@"setting.plist"];
+//    
+//    self.tableView.separatorStyle =UITableViewCellSeparatorStyleSingleLine;
+//    NSLog(@"viewDidAppear%lu",(unsigned long)self.datas.count);
+//}
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
 
     if (indexPath.section == 0 ) {
@@ -59,7 +51,9 @@
        
         
     }
-//    NSLog(@"willDisplayingCell");
+ 
 }
+
+
 
 @end

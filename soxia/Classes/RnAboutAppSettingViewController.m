@@ -16,25 +16,11 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    [self setDeviceDatas];
+    [self setUpDatas:@"aboutApp.plist"];
     self.title = @"关于App";
     self.tableView.separatorStyle =  UITableViewCellSeparatorStyleSingleLine;
 }
-- (void)setDeviceDatas{
-    
-    NSString *path = [[NSBundle mainBundle] pathForResource:@"aboutApp.plist" ofType:nil];
-    NSArray *dicArray = [NSArray arrayWithContentsOfFile:path];
-    
-    for (NSArray *arr in dicArray) {
-        NSMutableArray *dataArray = [NSMutableArray array];
-        [arr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-            RnSettingItem *item = [[RnSettingItem alloc] initWithDic:obj];
-            [dataArray addObject:item];
-        }];
-        [self.datas addObject:arr];
-    }
-    
-}
+
 
 
 

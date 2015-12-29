@@ -10,4 +10,6 @@
 
 @interface RnBasicSettingViewController : UITableViewController
 @property(nonatomic, strong)NSMutableArray *datas;
+- (instancetype)initWithName:(NSString *)name;
+-(void)setUpDatas:(NSString *)name;
 @end

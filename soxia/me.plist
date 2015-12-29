@@ -25,7 +25,7 @@
 			<key>type</key>
 			<string>ArrowItem</string>
 			<key>vcClass</key>
-			<string></string>
+			<string>RnMeNameViewController</string>
 		</dict>
 		<dict>
 			<key>icon</key>

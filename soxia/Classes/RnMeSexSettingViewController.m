@@ -87,6 +87,7 @@
     [defult setObject:x forKey:RnOldPxKeyX];
     [defult setObject:y forKey:RnOldPxKeyY];
     [defult synchronize];
+    
     [self.navigationController popViewControllerAnimated:YES];
     
 }

@@ -21,10 +21,27 @@
     }
 
     _datas = [NSMutableArray array];
-
+    
 return _datas;
 }
 
+-(void)setUpDatas:(NSString *)name
+{
+        NSString *path = [[NSBundle mainBundle] pathForResource:name ofType:nil];
+        NSArray *dicArray = [NSArray arrayWithContentsOfFile:path];
+        
+        for (NSArray *arr in dicArray) {
+            NSMutableArray *dataArray = [NSMutableArray array];
+            [arr enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                RnSettingItem *item = [[RnSettingItem alloc] initWithDic:obj];
+                [dataArray addObject:item];
+            }];
+            [self.datas addObject:arr];
+        }
+
+
+
+}
 #pragma mark - 分组
 - (instancetype)initWithStyle:(UITableViewStyle)style{
     NSLog(@" UITableViewStyleGrouped ");
@@ -36,9 +53,21 @@ return _datas;
     [super viewDidLoad];
     
 }
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
 
 
+}
 
+- (instancetype)initWithName:(NSString *)name{
+
+    if (self = [super init]) {
+        [self setUpDatas:name];
+    }
+
+    return self;
+
+}
 
 #pragma mark - Table view data source
 

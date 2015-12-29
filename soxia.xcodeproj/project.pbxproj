@@ -46,6 +46,14 @@
 		3B16E7AC1C290F1900B14CD4 /* RnButton.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B16E7AB1C290F1900B14CD4 /* RnButton.m */; };
 		3B16E7B01C29149B00B14CD4 /* ApiManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B16E7AF1C29149B00B14CD4 /* ApiManager.m */; };
 		3B5C69CD1C2FF7E900D1AA61 /* RnMeSexSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C69CB1C2FF7E900D1AA61 /* RnMeSexSettingViewController.m */; };
+		3B5C69DA1C31847A00D1AA61 /* SGActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C69D11C31847A00D1AA61 /* SGActionView.m */; };
+		3B5C69DB1C31847A00D1AA61 /* SGAlertMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C69D31C31847A00D1AA61 /* SGAlertMenu.m */; };
+		3B5C69DC1C31847A00D1AA61 /* SGBaseMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C69D51C31847A00D1AA61 /* SGBaseMenu.m */; };
+		3B5C69DD1C31847A00D1AA61 /* SGGridMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C69D71C31847A00D1AA61 /* SGGridMenu.m */; };
+		3B5C69DE1C31847A00D1AA61 /* SGSheetMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C69D91C31847A00D1AA61 /* SGSheetMenu.m */; };
+		3B5C69E21C31888200D1AA61 /* MBButtonMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C69E11C31888200D1AA61 /* MBButtonMenuViewController.m */; };
+		3B5C69E61C32516F00D1AA61 /* RnMeNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C69E41C32516F00D1AA61 /* RnMeNameViewController.m */; };
+		3B5C69E71C32516F00D1AA61 /* RnMeNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B5C69E51C32516F00D1AA61 /* RnMeNameViewController.xib */; };
 		3B6007331C2E8CF100F0CE8D /* AccountTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6007321C2E8CF100F0CE8D /* AccountTable.m */; };
 		3B6007361C2E932600F0CE8D /* RnMeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6007351C2E932600F0CE8D /* RnMeInfoViewController.m */; };
 		3B60073A1C2E94BA00F0CE8D /* me.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B6007391C2E94BA00F0CE8D /* me.plist */; };
@@ -120,6 +128,21 @@
 		3B16E7AF1C29149B00B14CD4 /* ApiManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ApiManager.m; sourceTree = "<group>"; };
 		3B5C69CA1C2FF7E900D1AA61 /* RnMeSexSettingViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RnMeSexSettingViewController.h; sourceTree = "<group>"; };
 		3B5C69CB1C2FF7E900D1AA61 /* RnMeSexSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RnMeSexSettingViewController.m; sourceTree = "<group>"; };
+		3B5C69D01C31847A00D1AA61 /* SGActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGActionView.h; sourceTree = "<group>"; };
+		3B5C69D11C31847A00D1AA61 /* SGActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGActionView.m; sourceTree = "<group>"; };
+		3B5C69D21C31847A00D1AA61 /* SGAlertMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGAlertMenu.h; sourceTree = "<group>"; };
+		3B5C69D31C31847A00D1AA61 /* SGAlertMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGAlertMenu.m; sourceTree = "<group>"; };
+		3B5C69D41C31847A00D1AA61 /* SGBaseMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGBaseMenu.h; sourceTree = "<group>"; };
+		3B5C69D51C31847A00D1AA61 /* SGBaseMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGBaseMenu.m; sourceTree = "<group>"; };
+		3B5C69D61C31847A00D1AA61 /* SGGridMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGGridMenu.h; sourceTree = "<group>"; };
+		3B5C69D71C31847A00D1AA61 /* SGGridMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGGridMenu.m; sourceTree = "<group>"; };
+		3B5C69D81C31847A00D1AA61 /* SGSheetMenu.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SGSheetMenu.h; sourceTree = "<group>"; };
+		3B5C69D91C31847A00D1AA61 /* SGSheetMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSheetMenu.m; sourceTree = "<group>"; };
+		3B5C69E01C31888200D1AA61 /* MBButtonMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBButtonMenuViewController.h; sourceTree = "<group>"; };
+		3B5C69E11C31888200D1AA61 /* MBButtonMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBButtonMenuViewController.m; sourceTree = "<group>"; };
+		3B5C69E31C32516F00D1AA61 /* RnMeNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RnMeNameViewController.h; sourceTree = "<group>"; };
+		3B5C69E41C32516F00D1AA61 /* RnMeNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RnMeNameViewController.m; sourceTree = "<group>"; };
+		3B5C69E51C32516F00D1AA61 /* RnMeNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RnMeNameViewController.xib; sourceTree = "<group>"; };
 		3B6007311C2E8CF100F0CE8D /* AccountTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountTable.h; sourceTree = "<group>"; };
 		3B6007321C2E8CF100F0CE8D /* AccountTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTable.m; sourceTree = "<group>"; };
 		3B6007341C2E932600F0CE8D /* RnMeInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RnMeInfoViewController.h; sourceTree = "<group>"; };
@@ -243,8 +266,10 @@
 		3B16E7651C285F1300B14CD4 /* Framework */ = {
 			isa = PBXGroup;
 			children = (
+				3B5C69DF1C31888200D1AA61 /* Button Menu */,
 				3B60073B1C2FB2C900F0CE8D /* MBProgressHUD+MJ.h */,
 				3B60073C1C2FB2C900F0CE8D /* MBProgressHUD+MJ.m */,
+				3B5C69CF1C31847A00D1AA61 /* SGActionView */,
 			);
 			path = Framework;
 			sourceTree = "<group>";
@@ -364,10 +389,39 @@
 				3B72E6991C2CFC750009F523 /* RnMeSettingViewController.m */,
 				3B6007341C2E932600F0CE8D /* RnMeInfoViewController.h */,
 				3B6007351C2E932600F0CE8D /* RnMeInfoViewController.m */,
+				3B5C69E31C32516F00D1AA61 /* RnMeNameViewController.h */,
+				3B5C69E41C32516F00D1AA61 /* RnMeNameViewController.m */,
+				3B5C69E51C32516F00D1AA61 /* RnMeNameViewController.xib */,
 				3B5C69CA1C2FF7E900D1AA61 /* RnMeSexSettingViewController.h */,
 				3B5C69CB1C2FF7E900D1AA61 /* RnMeSexSettingViewController.m */,
 			);
 			name = MeAccount;
+			sourceTree = "<group>";
+		};
+		3B5C69CF1C31847A00D1AA61 /* SGActionView */ = {
+			isa = PBXGroup;
+			children = (
+				3B5C69D01C31847A00D1AA61 /* SGActionView.h */,
+				3B5C69D11C31847A00D1AA61 /* SGActionView.m */,
+				3B5C69D21C31847A00D1AA61 /* SGAlertMenu.h */,
+				3B5C69D31C31847A00D1AA61 /* SGAlertMenu.m */,
+				3B5C69D41C31847A00D1AA61 /* SGBaseMenu.h */,
+				3B5C69D51C31847A00D1AA61 /* SGBaseMenu.m */,
+				3B5C69D61C31847A00D1AA61 /* SGGridMenu.h */,
+				3B5C69D71C31847A00D1AA61 /* SGGridMenu.m */,
+				3B5C69D81C31847A00D1AA61 /* SGSheetMenu.h */,
+				3B5C69D91C31847A00D1AA61 /* SGSheetMenu.m */,
+			);
+			path = SGActionView;
+			sourceTree = "<group>";
+		};
+		3B5C69DF1C31888200D1AA61 /* Button Menu */ = {
+			isa = PBXGroup;
+			children = (
+				3B5C69E01C31888200D1AA61 /* MBButtonMenuViewController.h */,
+				3B5C69E11C31888200D1AA61 /* MBButtonMenuViewController.m */,
+			);
+			path = "Button Menu";
 			sourceTree = "<group>";
 		};
 		3B72E67C1C2AAFC00009F523 /* Main */ = {
@@ -529,6 +583,7 @@
 				3B16E7A01C2909FD00B14CD4 /* login_dropdown_bg@2x.png in Resources */,
 				3B72E68C1C2C1E450009F523 /* setting.plist in Resources */,
 				3B16E7961C2909FD00B14CD4 /* login_textfield_more@2x.png in Resources */,
+				3B5C69E71C32516F00D1AA61 /* RnMeNameViewController.xib in Resources */,
 				3B60073A1C2E94BA00F0CE8D /* me.plist in Resources */,
 				3B16E78F1C2909FD00B14CD4 /* login_textfield_bottom@2x.png in Resources */,
 			);
@@ -589,9 +644,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3B5C69DC1C31847A00D1AA61 /* SGBaseMenu.m in Sources */,
 				3B60073D1C2FB2C900F0CE8D /* MBProgressHUD+MJ.m in Sources */,
 				3B72E6781C292C490009F523 /* RnAccountScrollView.m in Sources */,
 				3B72E6941C2C3F4C0009F523 /* RnSettingItemCell.m in Sources */,
+				3B5C69E61C32516F00D1AA61 /* RnMeNameViewController.m in Sources */,
 				3BF350DA1C2FD8F000A5C7A1 /* RnAboutAppSettingViewController.m in Sources */,
 				3B16E7501C28582E00B14CD4 /* ViewController.m in Sources */,
 				3BF350CE1C2FCAAE00A5C7A1 /* RnPreferenceSettingViewController.m in Sources */,
@@ -606,11 +663,16 @@
 				3B16E7731C29099200B14CD4 /* RnLoginViewController.m in Sources */,
 				3B72E6A51C2E4F2C0009F523 /* RnViewCell.m in Sources */,
 				3B72E68F1C2C20D80009F523 /* RnSettingItem.m in Sources */,
+				3B5C69E21C31888200D1AA61 /* MBButtonMenuViewController.m in Sources */,
+				3B5C69DA1C31847A00D1AA61 /* SGActionView.m in Sources */,
 				3B72E67B1C2AAFB70009F523 /* RnNavigationController.m in Sources */,
+				3B5C69DD1C31847A00D1AA61 /* SGGridMenu.m in Sources */,
 				3B16E7AC1C290F1900B14CD4 /* RnButton.m in Sources */,
 				3B72E6801C2AC2080009F523 /* RnRegisterViewController.m in Sources */,
 				3B6007331C2E8CF100F0CE8D /* AccountTable.m in Sources */,
 				3B16E74A1C28582E00B14CD4 /* main.m in Sources */,
+				3B5C69DB1C31847A00D1AA61 /* SGAlertMenu.m in Sources */,
+				3B5C69DE1C31847A00D1AA61 /* SGSheetMenu.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
