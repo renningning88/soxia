@@ -34,7 +34,13 @@
     NSUserDefaults *defult = [NSUserDefaults standardUserDefaults];
     [defult setObject:self.nameFeild.text forKey:@"name"];
     [defult synchronize];
+    
+    if ([self.delegate respondsToSelector:@selector(rnMeNameViewController:reloadName:)]) {
+        [self.delegate rnMeNameViewController:self reloadName:self.nameFeild.text];
+    }
 [self.navigationController popViewControllerAnimated:YES];
+    
+    
 
 }
 

@@ -12,26 +12,24 @@
 #import "RnMeNameViewController.h"
 @interface RnMeInfoViewController ()<MBButtonMenuViewControllerDelegate>
 @property(nonatomic, strong)MBButtonMenuViewController *menu;
+
 @end
 
 @implementation RnMeInfoViewController
 
 #pragma mark - 视图加载
-
+static  id loadname;
 - (void)viewDidLoad{
     [super viewDidLoad];
-//    [self setUpDatas:@"me.plist" ];
-//    self.title = @"个人资料";
-    self.tableView.separatorStyle =  UITableViewCellSeparatorStyleSingleLine;
-//    self.tableView.separatorColor = [UIColor redColor];
-    [self.tableView reloadData];
-}
-- (void)viewDidAppear:(BOOL)animated{
-    NSLog(@"==================================");
     [self setUpDatas:@"me.plist" ];
     self.title = @"个人资料";
-    [super viewDidAppear:animated];
+    self.tableView.separatorStyle =  UITableViewCellSeparatorStyleSingleLine;
 
+   
+}
+- (void)viewDidAppear:(BOOL)animated{
+    [super viewDidAppear:animated];
+    [self.tableView reloadData];
 }
 
 - (CGFloat)tableView:(UITableView *)tableView heightForRowAtIndexPath:(NSIndexPath *)indexPath{
@@ -43,6 +41,7 @@
 }
 
 - (void)tableView:(UITableView *)tableView willDisplayCell:(UITableViewCell *)cell forRowAtIndexPath:(NSIndexPath *)indexPath{
+    
     NSArray *cellArray = self.datas[indexPath.section];
     RnSettingItem *item = [[RnSettingItem alloc] initWithDic:cellArray[indexPath.row]];
     NSUserDefaults *defult = [NSUserDefaults standardUserDefaults];
@@ -54,8 +53,9 @@
             cell.detailTextLabel.layer.cornerRadius = 8.0f;
             cell.detailTextLabel.layer.masksToBounds = YES;
         }else if (indexPath.row ==1)
-           
-            cell.detailTextLabel.text =name ;
+            
+            cell.detailTextLabel.text =name;
+        
         }
     
 }
@@ -67,6 +67,7 @@
              [self showmenu];
         }else{
             RnMeNameViewController *vc = [[RnMeNameViewController alloc] init];
+            
             [self.navigationController pushViewController:vc animated:YES];
         }
     }else{
