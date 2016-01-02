@@ -53,6 +53,10 @@
 		3B5C69DE1C31847A00D1AA61 /* SGSheetMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C69D91C31847A00D1AA61 /* SGSheetMenu.m */; };
 		3B5C69E21C31888200D1AA61 /* MBButtonMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C69E11C31888200D1AA61 /* MBButtonMenuViewController.m */; };
 		3B5C69EE1C37640E00D1AA61 /* RnMeCellPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C69ED1C37640E00D1AA61 /* RnMeCellPushViewController.m */; };
+		3B5C69F51C37BC7A00D1AA61 /* school.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B5C69F41C37BC7A00D1AA61 /* school.plist */; };
+		3B5C69FB1C37C58200D1AA61 /* RnBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C69FA1C37C58200D1AA61 /* RnBasicViewController.m */; };
+		3B5C69FE1C37C5A200D1AA61 /* RnBaicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C69FD1C37C5A200D1AA61 /* RnBaicTableViewCell.m */; };
+		3B5C6A011C37C87100D1AA61 /* RnBasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C6A001C37C87100D1AA61 /* RnBasicView.m */; };
 		3B6007331C2E8CF100F0CE8D /* AccountTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6007321C2E8CF100F0CE8D /* AccountTable.m */; };
 		3B6007361C2E932600F0CE8D /* RnMeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6007351C2E932600F0CE8D /* RnMeInfoViewController.m */; };
 		3B60073A1C2E94BA00F0CE8D /* me.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B6007391C2E94BA00F0CE8D /* me.plist */; };
@@ -141,6 +145,13 @@
 		3B5C69E11C31888200D1AA61 /* MBButtonMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBButtonMenuViewController.m; sourceTree = "<group>"; };
 		3B5C69EC1C37640E00D1AA61 /* RnMeCellPushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RnMeCellPushViewController.h; sourceTree = "<group>"; };
 		3B5C69ED1C37640E00D1AA61 /* RnMeCellPushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RnMeCellPushViewController.m; sourceTree = "<group>"; };
+		3B5C69F41C37BC7A00D1AA61 /* school.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = school.plist; sourceTree = "<group>"; };
+		3B5C69F91C37C58200D1AA61 /* RnBasicViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RnBasicViewController.h; sourceTree = "<group>"; };
+		3B5C69FA1C37C58200D1AA61 /* RnBasicViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RnBasicViewController.m; sourceTree = "<group>"; };
+		3B5C69FC1C37C5A200D1AA61 /* RnBaicTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RnBaicTableViewCell.h; sourceTree = "<group>"; };
+		3B5C69FD1C37C5A200D1AA61 /* RnBaicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RnBaicTableViewCell.m; sourceTree = "<group>"; };
+		3B5C69FF1C37C87100D1AA61 /* RnBasicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RnBasicView.h; sourceTree = "<group>"; };
+		3B5C6A001C37C87100D1AA61 /* RnBasicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RnBasicView.m; sourceTree = "<group>"; };
 		3B6007311C2E8CF100F0CE8D /* AccountTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountTable.h; sourceTree = "<group>"; };
 		3B6007321C2E8CF100F0CE8D /* AccountTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTable.m; sourceTree = "<group>"; };
 		3B6007341C2E932600F0CE8D /* RnMeInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RnMeInfoViewController.h; sourceTree = "<group>"; };
@@ -237,6 +248,7 @@
 			children = (
 				3B16E7511C28582E00B14CD4 /* Main.storyboard */,
 				3BF350D61C2FD85600A5C7A1 /* aboutApp.plist */,
+				3B5C69F41C37BC7A00D1AA61 /* school.plist */,
 				3B72E68B1C2C1E450009F523 /* setting.plist */,
 				3BF350D11C2FD66900A5C7A1 /* device.plist */,
 				3BF350CF1C2FCB3600A5C7A1 /* preference.plist */,
@@ -364,6 +376,12 @@
 				3B16E7AB1C290F1900B14CD4 /* RnButton.m */,
 				3B72E6761C292C480009F523 /* RnAccountScrollView.h */,
 				3B72E6771C292C490009F523 /* RnAccountScrollView.m */,
+				3B5C69FC1C37C5A200D1AA61 /* RnBaicTableViewCell.h */,
+				3B5C69FD1C37C5A200D1AA61 /* RnBaicTableViewCell.m */,
+				3B5C69FF1C37C87100D1AA61 /* RnBasicView.h */,
+				3B5C6A001C37C87100D1AA61 /* RnBasicView.m */,
+				3B5C69F91C37C58200D1AA61 /* RnBasicViewController.h */,
+				3B5C69FA1C37C58200D1AA61 /* RnBasicViewController.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -573,6 +591,7 @@
 				3B16E79C1C2909FD00B14CD4 /* login_avatar@2x.png in Resources */,
 				3BF350D01C2FCB3600A5C7A1 /* preference.plist in Resources */,
 				3B16E79E1C2909FD00B14CD4 /* login_dropdown_avatar_border@2x.png in Resources */,
+				3B5C69F51C37BC7A00D1AA61 /* school.plist in Resources */,
 				3B16E79B1C2909FD00B14CD4 /* login_avatar.png in Resources */,
 				3B16E7A51C2909FD00B14CD4 /* login_bg_ip5@2x.jpg in Resources */,
 				3B16E7951C2909FD00B14CD4 /* login_textfield_more.png in Resources */,
@@ -642,6 +661,7 @@
 			files = (
 				3B5C69DC1C31847A00D1AA61 /* SGBaseMenu.m in Sources */,
 				3B60073D1C2FB2C900F0CE8D /* MBProgressHUD+MJ.m in Sources */,
+				3B5C69FB1C37C58200D1AA61 /* RnBasicViewController.m in Sources */,
 				3B72E6781C292C490009F523 /* RnAccountScrollView.m in Sources */,
 				3B72E6941C2C3F4C0009F523 /* RnSettingItemCell.m in Sources */,
 				3BF350DA1C2FD8F000A5C7A1 /* RnAboutAppSettingViewController.m in Sources */,
@@ -652,10 +672,12 @@
 				3B72E6881C2AE86C0009F523 /* RnFogotPwdViewController.m in Sources */,
 				3B16E74D1C28582E00B14CD4 /* AppDelegate.m in Sources */,
 				3B72E69A1C2CFC750009F523 /* RnMeSettingViewController.m in Sources */,
+				3B5C69FE1C37C5A200D1AA61 /* RnBaicTableViewCell.m in Sources */,
 				3B72E6971C2C44D30009F523 /* RnBasicSettingViewController.m in Sources */,
 				3B16E7B01C29149B00B14CD4 /* ApiManager.m in Sources */,
 				3B6007361C2E932600F0CE8D /* RnMeInfoViewController.m in Sources */,
 				3B16E7731C29099200B14CD4 /* RnLoginViewController.m in Sources */,
+				3B5C6A011C37C87100D1AA61 /* RnBasicView.m in Sources */,
 				3B72E6A51C2E4F2C0009F523 /* RnViewCell.m in Sources */,
 				3B72E68F1C2C20D80009F523 /* RnSettingItem.m in Sources */,
 				3B5C69E21C31888200D1AA61 /* MBButtonMenuViewController.m in Sources */,

@@ -7,8 +7,9 @@
 //
 
 #import "RnMeCellPushViewController.h"
-
-@interface RnMeCellPushViewController ()<UIPickerViewDataSource, UIPickerViewDelegate>
+#import "RnSettingItemCell.h"
+#import "RnSettingItem.h"
+@interface RnMeCellPushViewController ()<UITableViewDataSource,UITableViewDelegate>
 
 @end
 
@@ -33,32 +34,7 @@
 
 }
 
-- (NSArray *)yearDatas{
-    if (_yearDatas) {
-        return _yearDatas;
-    }
-    _yearDatas = @[@"1988",@"1989",@"1990",@"1991"];
-    return _yearDatas;
-}
 
-- (NSArray *)monthDatas{
-
-    if (_monthDatas) {
-        return _monthDatas;
-    }
-    _monthDatas = @[@"1",@"2",@"3",@"4"];
-    return _monthDatas;
-}
-
-- (NSArray *)dateDatas{
-    if (_dateDatas) {
-        return _dateDatas;
-    }
-    _dateDatas = @[@"01",@"02",@"03",@"04"];
-    return _dateDatas;
-
-
-}
 #pragma mark - init
 - (instancetype)initWithTitle:(NSString *)title{
     if (self = [super init]) {
@@ -70,12 +46,20 @@
         [self.view addSubview:self.cellView];
         [self.cellView addSubview:self.cellFeild];
         if ([self.title isEqualToString:@"生日"]) {
-            UIPickerView *picker = [[UIPickerView alloc] init];
-            picker.dataSource = self;
-            picker.delegate = self;
+            
+            UIDatePicker *picker = [[UIDatePicker alloc] init];
+            picker.datePickerMode = UIDatePickerModeDate;
+            picker.locale = [[NSLocale alloc] initWithLocaleIdentifier:@"zh_CN"];
+            [picker addTarget: self action: @selector(onDatePickerChanged:) forControlEvents:UIControlEventValueChanged];
             self.picker = picker;
             [self.view addSubview:_picker];
-//            self.cellFeild.text = ;
+
+        }else if ([self.title isEqualToString:@"学校"]){
+            UITableView *schoolView = [[UITableView alloc] init];
+            schoolView.delegate = self;
+            schoolView.dataSource = self;
+            self.schoolView = schoolView;
+            [self.view addSubview:self.schoolView];
         }
         [self.cellView makeConstraints:^(MASConstraintMaker *make) {
             make.top.mas_equalTo(self.view).offset(64.0f);
@@ -96,6 +80,12 @@
             make.centerX.mas_equalTo(self.view);
             make.height.mas_equalTo(200.0f);
         }];
+        [self.schoolView makeConstraints:^(MASConstraintMaker *make) {
+            make.top.mas_equalTo(self.cellView.bottom).offset(30.0f);
+            make.width.mas_equalTo(self.view);
+            make.centerX.mas_equalTo(self.view);
+            make.bottom.mas_equalTo(self.view.bottom);
+        }];
         // 2 添加按钮并设置
         self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithTitle:@"取消" style:UIBarButtonItemStylePlain target:self action:@selector(closeContent)];
         self.navigationItem.rightBarButtonItem =[[UIBarButtonItem alloc] initWithTitle:@"保存" style:UIBarButtonItemStylePlain target:self action:@selector(saveContent)];
@@ -109,11 +99,14 @@
 
     return self;
 }
+/** 取消按钮*/
 - (void)closeContent{
     
     [self.navigationController popViewControllerAnimated:YES];
     
 }
+
+/** 保存按钮*/
 - (void)saveContent{
     
     NSUserDefaults *defult = [NSUserDefaults standardUserDefaults];
@@ -128,58 +121,28 @@
     self.navigationItem.rightBarButtonItem.enabled = YES;
     
 }
+/** datepicker 改变*/
+- (void)onDatePickerChanged:(UIDatePicker *)picker{
+    self.navigationItem.rightBarButtonItem.enabled = YES;
+    NSDateFormatter *dateFormatter = [[NSDateFormatter alloc] init];
+    [dateFormatter setDateFormat:@"yyyy--MM--dd"];
+   
+    self.cellFeild.text = [dateFormatter stringFromDate:self.picker.date];
 
-#pragma mark - pickerview datasource and delegate
-/** 列数*/
-- (NSInteger)numberOfComponentsInPickerView:(UIPickerView *)pickerView{
-    return 3;
-}
-/** 每列个数*/
-
-- (NSInteger)pickerView:(UIPickerView *)pickerView numberOfRowsInComponent:(NSInteger)component{
-
-    if (component == 0) {
-        return self.yearDatas.count;
-    }else if (component ==1){
-        return self.monthDatas.count;
-    }else{
-        return self.dateDatas.count;
-    }
 }
 
-// 每列宽度
-- (CGFloat)pickerView:(UIPickerView *)pickerView widthForComponent:(NSInteger)component {
+#pragma mark - tableview 代理 
+- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+
+    return 10;
+}
+
+- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
+
+// 1 创建cell
+    RnSettingItemCell *cell = [RnSettingItemCell cellWithTableView:tableView];
+
     
-    return self.view.frame.size.width/ 3;
+    return cell;
 }
-// 返回选中的行
-- (void)pickerView:(UIPickerView *)pickerView didSelectRow:(NSInteger)row inComponent:(NSInteger)component
-{
-//    NSString *picYear = [NSString string];
-//    NSString *picMon= [NSString string];
-//    NSString *picDate= [NSString string];
-//    picYear = [self.yearDatas objectAtIndex:row];
-//    picMon = [self.monthDatas objectAtIndex:row];
-//    picDate = [self.dateDatas objectAtIndex:row];
-// 
-//    self.cellFeild.text = [NSString stringWithFormat:@"%@--%@--%@",picYear,picMon,picDate];
-}
-
-
-
-//返回当前行的内容,此处是将数组中数值添加到滚动的那个显示栏上
--(NSString*)pickerView:(UIPickerView *)pickerView titleForRow:(NSInteger)row forComponent:(NSInteger)component
-{
-    if (component == 0) {
-        return [self.yearDatas objectAtIndex:row];
-    } else if(component == 1){
-        return [self.monthDatas objectAtIndex:row];
-        
-    }else{
-        return [self.dateDatas objectAtIndex:row];
-    
-    }
-}
-
-
 @end

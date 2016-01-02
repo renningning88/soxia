@@ -7,13 +7,14 @@
 //
 
 #import <UIKit/UIKit.h>
-
+#import "RnBasicView.h"
 @interface RnMeCellPushViewController : UIViewController
-@property(nonatomic,strong)NSArray *yearDatas;
-@property(nonatomic,strong)NSArray *monthDatas;
-@property(nonatomic,strong)NSArray *dateDatas;
+
+@property(nonatomic,strong)UIDatePicker *picker;
 @property(nonatomic, strong)UITextField *cellFeild;
 @property (nonatomic, strong)UIView *cellView;
-@property (nonatomic,strong)UIPickerView *picker;
+@property (nonatomic, strong)UITableView *schoolView;
 - (instancetype)initWithTitle:(NSString *)title;
+
+@property(nonatomic,strong)NSArray *schoolDatas;
 @end

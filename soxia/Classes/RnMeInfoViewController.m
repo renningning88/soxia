@@ -63,7 +63,7 @@ static  id loadname;
             int num = [y intValue];
             cell.detailTextLabel.text = cellDatas[num];
         }
-    }else if (indexPath.section ==1|| indexPath.section ==2){
+    }else {
         
         cell.detailTextLabel.text = text;
     }
@@ -83,7 +83,7 @@ static  id loadname;
             RnMeSexSettingViewController *vc03 = [[RnMeSexSettingViewController alloc] init];
             [self.navigationController pushViewController:vc03 animated:YES];
         }
-    }else if(indexPath.section == 1 || indexPath.section == 2){
+    }else {
         RnMeCellPushViewController *vc13 = [[RnMeCellPushViewController alloc] initWithTitle:cell.textLabel.text];
         [self.navigationController pushViewController:vc13 animated:YES];
     }
