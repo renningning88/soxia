@@ -10,7 +10,7 @@
 #import "RnRegisterViewController.h"
 #import "RnFogotPwdViewController.h"
 #define ANIMATION_DURATION 0.3f
-@interface RnLoginViewController ()<RnRegisterViewControllerDelegate,RnFogotPwdViewControllerDelegate>
+@interface RnLoginViewController ()<RnRegisterViewControllerDelegate,RnFogotPwdViewControllerDelegate,UITextFieldDelegate>
 
 @end
 
@@ -33,7 +33,8 @@
 - (void)viewDidAppear:(BOOL)animated {
     [super viewDidAppear:animated];
 //    NSLog(@"register --login self.datas ====%@",self.datas);
-    
+    self.accountFeild.delegate = self;
+    self.pwdFeild.delegate = self;
     self.title = @"登录";
     self.loginBtn.enabled = NO;
     // 1 隐藏navigationbar
@@ -49,6 +50,7 @@
     // 4 读取上一次的用户名和密码
     NSUserDefaults *defult = [NSUserDefaults standardUserDefaults];
     self.accountFeild.text = [defult objectForKey:RnAccountKey];
+    
     self.pwdFeild.text = [defult objectForKey:RnPwdKey];
 //    self.iconView.image = [defult objectForKey:RnIconKey];
     if (defult) {
@@ -67,6 +69,12 @@
 
     self.loginBtn.enabled = (self.accountFeild.text.length > 0 && self.pwdFeild.text.length > 0);
    
+}
+#pragma mark - uitextfeild 代理
+- (BOOL)textFieldShouldReturn:(UITextField *)textField
+{
+    [textField resignFirstResponder];
+    return true;
 }
 #pragma mark - registerView 的代理
 - (void)registerViewController:(RnRegisterViewController *)registerViewController didLoadDatas:(NSMutableArray *)datas{
@@ -293,6 +301,8 @@
     [self.iconView setImage:[UIImage imageNamed:[[self.datas  objectAtIndex:accountIndex] objectForKey:@"icon"]]];
     [self hideAccountBox];
 }
+
+
 
 
 @end

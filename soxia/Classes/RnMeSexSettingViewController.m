@@ -7,8 +7,7 @@
 //
 
 #import "RnMeSexSettingViewController.h"
-#define RnOldPxKeyX @"x"
-#define RnOldPxKeyY @"y"
+
 @interface RnMeSexSettingViewController ()
 
 @end
@@ -20,7 +19,7 @@
     
     [super viewDidLoad];
     self.tableView.separatorStyle =UITableViewCellSeparatorStyleSingleLine;
-    
+    self.title = @"性别";
    
     
 }

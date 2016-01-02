@@ -26,5 +26,6 @@
 #define RnAccountKey @"account"
 #define RnPwdKey @"pwd"
 #define RnIconKey @"icon"
-
+#define RnOldPxKeyX @"x"
+#define RnOldPxKeyY @"y"
 #endif /* PrefixHeader_pch */

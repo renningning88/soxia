@@ -26,7 +26,9 @@
 // 监听
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textChange) name:UITextFieldTextDidChangeNotification object:self.accountFeild];
     [[NSNotificationCenter defaultCenter] addObserver:self selector:@selector(textChange) name:UITextFieldTextDidChangeNotification object:self.pwdFeild];
-    
+    [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(textDidEndChange) name:UITextFieldTextDidEndEditingNotification object:self.pwdFeild];
+     [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(accountTextDidEndChange) name:UITextFieldTextDidEndEditingNotification object:self.accountFeild];
+       [[NSNotificationCenter defaultCenter]addObserver:self selector:@selector(repeatPwdTextDidEndChange) name:UITextFieldTextDidEndEditingNotification object:self.repeatPwdFeild];
 }
 
 - (void)dealloc{
@@ -35,8 +37,41 @@
 }
 
 - (void)textChange{
-
+   
     self.saveBtn.enabled = (self.accountFeild.text.length > 0 && self.pwdFeild.text.length > 0);
+}
+
+- (void)repeatPwdTextDidEndChange{
+    if (![self.repeatPwdFeild.text isEqualToString:self.pwdFeild.text]) {
+        self.warnRepeatPwd.hidden = NO;
+        self.saveBtn.enabled = NO;
+    }else{
+        self.warnRepeatPwd.hidden = YES;
+        self.saveBtn.enabled = YES;
+    }
+
+}
+- (void)accountTextDidEndChange{
+
+    // 1 看用户名是否存在
+    for (NSDictionary *dic in self.datas) {
+        if ([self.accountFeild.text isEqualToString:[dic objectForKey:@"account"]]) {
+            self.warnFeild.hidden = NO;
+            self.saveBtn.enabled = NO;
+        }else{
+            self.warnFeild.hidden = YES;
+            self.saveBtn.enabled = YES;
+        }
+    }
+
+}
+- (void)textDidEndChange{
+    if (self.pwdFeild.text.length < 6) {
+        self.warnPwdLabel.hidden = NO;
+    }else{
+        self.warnPwdLabel.hidden = YES;
+    }
+
 }
 - (void)didReceiveMemoryWarning {
     [super didReceiveMemoryWarning];
@@ -54,12 +89,11 @@
                 
             }
         }
-//    NSMutableDictionary *obj = [NSMutableDictionary dictionary];
-//    [obj setObject:self.accountFeild.text forKey:@"account"];
-////    [obj setObject:self.mailFeild.text forKey:@"mail"];
-//    [obj setObject:self.pwdFeild.text forKey:@"pwd"];
-//    [obj setObject:self.iconView.image forKey:@"icon"];
-//    [self.datas addObject:obj];
+    
+    if (![self.repeatPwdFeild.text isEqualToString:self.pwdFeild.text]) {
+        self.warnRepeatPwd.hidden = NO;
+    }else{
+       self.warnRepeatPwd.hidden = YES;
     NSDictionary *data = @{
                            @"account":self.accountFeild.text,
                            @"pwd":self.pwdFeild.text,
@@ -77,7 +111,7 @@
     // 5 返回登录
     [self.navigationController popViewControllerAnimated:YES];
     
-
+    }
     
 }
 

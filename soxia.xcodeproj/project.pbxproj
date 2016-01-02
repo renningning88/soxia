@@ -52,8 +52,7 @@
 		3B5C69DD1C31847A00D1AA61 /* SGGridMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C69D71C31847A00D1AA61 /* SGGridMenu.m */; };
 		3B5C69DE1C31847A00D1AA61 /* SGSheetMenu.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C69D91C31847A00D1AA61 /* SGSheetMenu.m */; };
 		3B5C69E21C31888200D1AA61 /* MBButtonMenuViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C69E11C31888200D1AA61 /* MBButtonMenuViewController.m */; };
-		3B5C69E61C32516F00D1AA61 /* RnMeNameViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C69E41C32516F00D1AA61 /* RnMeNameViewController.m */; };
-		3B5C69E71C32516F00D1AA61 /* RnMeNameViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 3B5C69E51C32516F00D1AA61 /* RnMeNameViewController.xib */; };
+		3B5C69EE1C37640E00D1AA61 /* RnMeCellPushViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C69ED1C37640E00D1AA61 /* RnMeCellPushViewController.m */; };
 		3B6007331C2E8CF100F0CE8D /* AccountTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6007321C2E8CF100F0CE8D /* AccountTable.m */; };
 		3B6007361C2E932600F0CE8D /* RnMeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6007351C2E932600F0CE8D /* RnMeInfoViewController.m */; };
 		3B60073A1C2E94BA00F0CE8D /* me.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B6007391C2E94BA00F0CE8D /* me.plist */; };
@@ -140,9 +139,8 @@
 		3B5C69D91C31847A00D1AA61 /* SGSheetMenu.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SGSheetMenu.m; sourceTree = "<group>"; };
 		3B5C69E01C31888200D1AA61 /* MBButtonMenuViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = MBButtonMenuViewController.h; sourceTree = "<group>"; };
 		3B5C69E11C31888200D1AA61 /* MBButtonMenuViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = MBButtonMenuViewController.m; sourceTree = "<group>"; };
-		3B5C69E31C32516F00D1AA61 /* RnMeNameViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RnMeNameViewController.h; sourceTree = "<group>"; };
-		3B5C69E41C32516F00D1AA61 /* RnMeNameViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RnMeNameViewController.m; sourceTree = "<group>"; };
-		3B5C69E51C32516F00D1AA61 /* RnMeNameViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = RnMeNameViewController.xib; sourceTree = "<group>"; };
+		3B5C69EC1C37640E00D1AA61 /* RnMeCellPushViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RnMeCellPushViewController.h; sourceTree = "<group>"; };
+		3B5C69ED1C37640E00D1AA61 /* RnMeCellPushViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RnMeCellPushViewController.m; sourceTree = "<group>"; };
 		3B6007311C2E8CF100F0CE8D /* AccountTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountTable.h; sourceTree = "<group>"; };
 		3B6007321C2E8CF100F0CE8D /* AccountTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTable.m; sourceTree = "<group>"; };
 		3B6007341C2E932600F0CE8D /* RnMeInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RnMeInfoViewController.h; sourceTree = "<group>"; };
@@ -389,9 +387,8 @@
 				3B72E6991C2CFC750009F523 /* RnMeSettingViewController.m */,
 				3B6007341C2E932600F0CE8D /* RnMeInfoViewController.h */,
 				3B6007351C2E932600F0CE8D /* RnMeInfoViewController.m */,
-				3B5C69E31C32516F00D1AA61 /* RnMeNameViewController.h */,
-				3B5C69E41C32516F00D1AA61 /* RnMeNameViewController.m */,
-				3B5C69E51C32516F00D1AA61 /* RnMeNameViewController.xib */,
+				3B5C69EC1C37640E00D1AA61 /* RnMeCellPushViewController.h */,
+				3B5C69ED1C37640E00D1AA61 /* RnMeCellPushViewController.m */,
 				3B5C69CA1C2FF7E900D1AA61 /* RnMeSexSettingViewController.h */,
 				3B5C69CB1C2FF7E900D1AA61 /* RnMeSexSettingViewController.m */,
 			);
@@ -583,7 +580,6 @@
 				3B16E7A01C2909FD00B14CD4 /* login_dropdown_bg@2x.png in Resources */,
 				3B72E68C1C2C1E450009F523 /* setting.plist in Resources */,
 				3B16E7961C2909FD00B14CD4 /* login_textfield_more@2x.png in Resources */,
-				3B5C69E71C32516F00D1AA61 /* RnMeNameViewController.xib in Resources */,
 				3B60073A1C2E94BA00F0CE8D /* me.plist in Resources */,
 				3B16E78F1C2909FD00B14CD4 /* login_textfield_bottom@2x.png in Resources */,
 			);
@@ -648,7 +644,6 @@
 				3B60073D1C2FB2C900F0CE8D /* MBProgressHUD+MJ.m in Sources */,
 				3B72E6781C292C490009F523 /* RnAccountScrollView.m in Sources */,
 				3B72E6941C2C3F4C0009F523 /* RnSettingItemCell.m in Sources */,
-				3B5C69E61C32516F00D1AA61 /* RnMeNameViewController.m in Sources */,
 				3BF350DA1C2FD8F000A5C7A1 /* RnAboutAppSettingViewController.m in Sources */,
 				3B16E7501C28582E00B14CD4 /* ViewController.m in Sources */,
 				3BF350CE1C2FCAAE00A5C7A1 /* RnPreferenceSettingViewController.m in Sources */,
@@ -664,6 +659,7 @@
 				3B72E6A51C2E4F2C0009F523 /* RnViewCell.m in Sources */,
 				3B72E68F1C2C20D80009F523 /* RnSettingItem.m in Sources */,
 				3B5C69E21C31888200D1AA61 /* MBButtonMenuViewController.m in Sources */,
+				3B5C69EE1C37640E00D1AA61 /* RnMeCellPushViewController.m in Sources */,
 				3B5C69DA1C31847A00D1AA61 /* SGActionView.m in Sources */,
 				3B72E67B1C2AAFB70009F523 /* RnNavigationController.m in Sources */,
 				3B5C69DD1C31847A00D1AA61 /* SGGridMenu.m in Sources */,

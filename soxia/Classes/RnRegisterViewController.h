@@ -21,6 +21,10 @@
 @interface RnRegisterViewController : UIViewController
 @property(nonatomic ,strong)AccountTable *accountTable;
 @property(nonatomic, strong)NSMutableArray *datas;
+@property (strong, nonatomic) IBOutlet UITextField *repeatPwdFeild;
+@property (strong, nonatomic) IBOutlet UILabel *warnPwdLabel;
+@property (strong, nonatomic) IBOutlet UILabel *warnRepeatPwd;
+
 @property (strong, nonatomic) IBOutlet UITextField *accountFeild;
 @property (strong, nonatomic) IBOutlet UITextField *mailFeild;
 @property (strong, nonatomic) IBOutlet UITextField *pwdFeild;
