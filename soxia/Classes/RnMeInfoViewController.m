@@ -83,6 +83,7 @@ static  id loadname;
         }else if (indexPath.row == 3){
             NSArray *cellDatas = @[@"男",@"女"];
             RnMeSexSettingViewController *vc03 = [[RnMeSexSettingViewController alloc] initWithDatas:cellDatas];
+            vc03.title = cell.textLabel.text;
             [self.navigationController pushViewController:vc03 animated:YES];
         }
     }else {

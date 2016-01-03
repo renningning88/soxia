@@ -11,7 +11,6 @@
 @interface RnMeSexSettingViewController : UITableViewController
 @property(nonatomic,strong)NSIndexPath *seleIndexpath;
 @property(nonatomic,strong)NSArray *cellDatas;
-
-
+@property(nonatomic,strong)NSMutableArray *ys;
 - (instancetype)initWithDatas:(NSArray *)cellDatas;
 @end
