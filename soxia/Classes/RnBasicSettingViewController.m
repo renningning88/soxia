@@ -63,6 +63,7 @@ return _datas;
 
     if (self = [super init]) {
         [self setUpDatas:name];
+        
     }
 
     return self;

@@ -7,8 +7,10 @@
 //
 
 #import "RnBasicViewController.h"
+#import "RnBasicView.h"
 #import "RnBaicTableViewCell.h"
-@interface RnBasicViewController ()<UITableViewDelegate, UITableViewDataSource>
+
+@interface RnBasicViewController ()<UITableViewDelegate>
 
 @end
 
@@ -16,73 +18,30 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    
-    
-}
-
-#pragma mark - 懒加载
-- (UITableView *)tableView{
-        if (_tableView) {
-            return _tableView;
-        }
-        _tableView = [[UITableView alloc] init];
-        _tableView.delegate = self;
-        _tableView.dataSource = self;
-        return _tableView;
-
-}
-#pragma mark - 创建
--(instancetype)initWithDatas:(NSArray *)datas{
-    
-    if (self = [super init]) {
-        
-        self.datas = datas;
-        [self.view addSubview:self.tableView];
-        [self.tableView makeConstraints:^(MASConstraintMaker *make) {
-            make.top.mas_equalTo(self.view);
-            make.width.mas_equalTo(self.view);
-            make.centerX.mas_equalTo(self.view);
-            make.height.mas_equalTo(self.view);
-        }];
-        
-    }
-    
-    
-    return self;
-}
-#pragma mark - tableview 代理和数据源方法
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
-    return self.datas.count;
+    self.bView.frame = self.view.frame;
+    self.bView.tableView.delegate = self;
+    [self.view addSubview:self.bView];
     
 }
 
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-    // 1 创建cell
-    RnBaicTableViewCell *cell = [RnBaicTableViewCell cellWithTableView:tableView];
-    
-    // 2 设置cell
-    NSDictionary *dic = self.datas[indexPath.row];
-    [cell setCellContent:dic];
-    return cell;
-}
 
-
-
-- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-{
-    // 1 取得数据
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+    NSUserDefaults *defult = [NSUserDefaults standardUserDefaults];
+    NSString *schoolId = [NSString stringWithFormat:@"%ld",indexPath.row];
+    [defult setObject:schoolId forKey:RnSchoolID];
+    [defult synchronize];
     NSDictionary *dic = self.datas[indexPath.row];
     if ([[dic objectForKey:@"type"] isEqualToString:@"ArrowItem"]) {
-        NSArray *schools = [dic objectForKey:@"schools"];
-        
-        RnBasicViewController *vc = [[RnBasicViewController alloc] initWithDatas:schools];
+        RnBasicViewController *vc = [[RnBasicViewController alloc] init];
+        RnBasicView *bView = [[RnBasicView alloc] initWithDatas:[dic objectForKey:@"datas"]];
+        bView.frame = self.view.frame;
+        vc.bView = bView;
         [self.navigationController pushViewController:vc animated:YES];
-    }else{
-    
-    
+    }else if ([[dic objectForKey:@"type"] isEqualToString:@""]){
+        [self.navigationController popViewControllerAnimated:YES];
     
     }
-    
 }
+
 
 @end

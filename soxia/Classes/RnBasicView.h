@@ -8,11 +8,11 @@
 
 #import <UIKit/UIKit.h>
 
-@interface RnBasicView : UIView <UITableViewDataSource, UITableViewDelegate>
+@interface RnBasicView : UIView <UITableViewDataSource>
 @property(nonatomic, strong)NSArray *datas;
 
 @property (nonatomic, strong)UITableView *tableView;
 
-
++(instancetype)basicWithName:(NSString *)plistName;
 -(instancetype)initWithDatas:(NSArray *)datas;
 @end

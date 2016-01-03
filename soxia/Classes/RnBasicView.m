@@ -16,7 +16,8 @@
         return _tableView;
     }
     _tableView = [[UITableView alloc] init];
-    _tableView.delegate = self;
+    _tableView.separatorStyle = UITableViewCellSeparatorStyleSingleLine;
+    _tableView.separatorColor = [UIColor grayColor];
     _tableView.dataSource = self;
     return _tableView;
 
@@ -41,6 +42,14 @@
 
     return self;
 }
+
++(instancetype)basicWithName:(NSString *)plistName{
+    NSString *path = [[NSBundle mainBundle] pathForResource:plistName ofType:nil];
+    NSArray *pathDatas = [NSArray arrayWithContentsOfFile:path];
+
+    return [[self alloc] initWithDatas:pathDatas];
+
+}
 #pragma mark - tableview 代理和数据源方法
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
     return self.datas.count;
@@ -58,17 +67,4 @@
 }
 
 
-
-//- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
-//{
-//// 1 取得数据
-//    NSDictionary *dic = self.datas[indexPath.row];
-//    if ([[dic objectForKey:@"type"] isEqualToString:@"ArrowItem"]) {
-////        NSArray *schools = [dic objectForKey:@"schools"];
-//        
-//    }
-//
-//
-//
-//}
 @end

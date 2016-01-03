@@ -6,13 +6,13 @@
 //  Copyright © 2016年 ningning. All rights reserved.
 //
 
+
+
+
 #import <UIKit/UIKit.h>
-
+#import "RnBasicView.h"
 @interface RnBasicViewController : UIViewController
-@property(nonatomic, strong)NSArray *datas;
+@property (nonatomic, strong)RnBasicView *bView;
+@property(nonatomic,strong)NSArray *datas;
 
-@property (nonatomic, strong)UITableView *tableView;
-
-
--(instancetype)initWithDatas:(NSArray *)datas;
 @end

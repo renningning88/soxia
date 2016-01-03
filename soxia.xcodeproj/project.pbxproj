@@ -57,6 +57,8 @@
 		3B5C69FB1C37C58200D1AA61 /* RnBasicViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C69FA1C37C58200D1AA61 /* RnBasicViewController.m */; };
 		3B5C69FE1C37C5A200D1AA61 /* RnBaicTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C69FD1C37C5A200D1AA61 /* RnBaicTableViewCell.m */; };
 		3B5C6A011C37C87100D1AA61 /* RnBasicView.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B5C6A001C37C87100D1AA61 /* RnBasicView.m */; };
+		3B5C6A051C38F18500D1AA61 /* myPreference.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B5C6A041C38F18500D1AA61 /* myPreference.plist */; };
+		3B5C6A081C38F6E200D1AA61 /* myDevice.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B5C6A071C38F6E200D1AA61 /* myDevice.plist */; };
 		3B6007331C2E8CF100F0CE8D /* AccountTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6007321C2E8CF100F0CE8D /* AccountTable.m */; };
 		3B6007361C2E932600F0CE8D /* RnMeInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 3B6007351C2E932600F0CE8D /* RnMeInfoViewController.m */; };
 		3B60073A1C2E94BA00F0CE8D /* me.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3B6007391C2E94BA00F0CE8D /* me.plist */; };
@@ -152,6 +154,8 @@
 		3B5C69FD1C37C5A200D1AA61 /* RnBaicTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RnBaicTableViewCell.m; sourceTree = "<group>"; };
 		3B5C69FF1C37C87100D1AA61 /* RnBasicView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RnBasicView.h; sourceTree = "<group>"; };
 		3B5C6A001C37C87100D1AA61 /* RnBasicView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = RnBasicView.m; sourceTree = "<group>"; };
+		3B5C6A041C38F18500D1AA61 /* myPreference.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = myPreference.plist; sourceTree = "<group>"; };
+		3B5C6A071C38F6E200D1AA61 /* myDevice.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = myDevice.plist; sourceTree = "<group>"; };
 		3B6007311C2E8CF100F0CE8D /* AccountTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AccountTable.h; sourceTree = "<group>"; };
 		3B6007321C2E8CF100F0CE8D /* AccountTable.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AccountTable.m; sourceTree = "<group>"; };
 		3B6007341C2E932600F0CE8D /* RnMeInfoViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = RnMeInfoViewController.h; sourceTree = "<group>"; };
@@ -246,12 +250,13 @@
 		3B16E7481C28582E00B14CD4 /* Supporting Files */ = {
 			isa = PBXGroup;
 			children = (
+				3B5C6A061C38F60800D1AA61 /* drop */,
 				3B16E7511C28582E00B14CD4 /* Main.storyboard */,
+				3BF350D11C2FD66900A5C7A1 /* device.plist */,
+				3BF350CF1C2FCB3600A5C7A1 /* preference.plist */,
 				3BF350D61C2FD85600A5C7A1 /* aboutApp.plist */,
 				3B5C69F41C37BC7A00D1AA61 /* school.plist */,
 				3B72E68B1C2C1E450009F523 /* setting.plist */,
-				3BF350D11C2FD66900A5C7A1 /* device.plist */,
-				3BF350CF1C2FCB3600A5C7A1 /* preference.plist */,
 				3B16E7541C28582E00B14CD4 /* Assets.xcassets */,
 				3B16E7561C28582E00B14CD4 /* LaunchScreen.storyboard */,
 				3B16E7591C28582E00B14CD4 /* Info.plist */,
@@ -439,6 +444,15 @@
 			path = "Button Menu";
 			sourceTree = "<group>";
 		};
+		3B5C6A061C38F60800D1AA61 /* drop */ = {
+			isa = PBXGroup;
+			children = (
+				3B5C6A071C38F6E200D1AA61 /* myDevice.plist */,
+				3B5C6A041C38F18500D1AA61 /* myPreference.plist */,
+			);
+			name = drop;
+			sourceTree = "<group>";
+		};
 		3B72E67C1C2AAFC00009F523 /* Main */ = {
 			isa = PBXGroup;
 			children = (
@@ -563,6 +577,7 @@
 			files = (
 				3B16E7901C2909FD00B14CD4 /* login_textfield_mid.png in Resources */,
 				3B16E7931C2909FD00B14CD4 /* login_textfield_more_flip.png in Resources */,
+				3B5C6A051C38F18500D1AA61 /* myPreference.plist in Resources */,
 				3B16E7A11C2909FD00B14CD4 /* login_btn_blue_nor.png in Resources */,
 				3B16E79D1C2909FD00B14CD4 /* login_dropdown_avatar_border.png in Resources */,
 				3B16E7581C28582E00B14CD4 /* LaunchScreen.storyboard in Resources */,
@@ -592,6 +607,7 @@
 				3BF350D01C2FCB3600A5C7A1 /* preference.plist in Resources */,
 				3B16E79E1C2909FD00B14CD4 /* login_dropdown_avatar_border@2x.png in Resources */,
 				3B5C69F51C37BC7A00D1AA61 /* school.plist in Resources */,
+				3B5C6A081C38F6E200D1AA61 /* myDevice.plist in Resources */,
 				3B16E79B1C2909FD00B14CD4 /* login_avatar.png in Resources */,
 				3B16E7A51C2909FD00B14CD4 /* login_bg_ip5@2x.jpg in Resources */,
 				3B16E7951C2909FD00B14CD4 /* login_textfield_more.png in Resources */,

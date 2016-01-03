@@ -28,4 +28,5 @@
 #define RnIconKey @"icon"
 #define RnOldPxKeyX @"x"
 #define RnOldPxKeyY @"y"
+#define RnSchoolID @"schoolId"
 #endif /* PrefixHeader_pch */

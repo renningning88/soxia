@@ -15,13 +15,18 @@
 @implementation RnMeSexSettingViewController
 
 
-- (void)viewDidLoad {
-    
-    [super viewDidLoad];
-    self.tableView.separatorStyle =UITableViewCellSeparatorStyleSingleLine;
-    self.title = @"性别";
-   
-    
+- (void)viewWillAppear:(BOOL)animated{
+    [super viewWillAppear:animated];
+    [self.tableView reloadData];
+
+}
+
+- (instancetype)initWithDatas:(NSArray *)cellDatas{
+    if (self = [super init]) {
+        self.cellDatas = cellDatas;
+    }
+
+    return self;
 }
 - (instancetype)initWithStyle:(UITableViewStyle)style{
 
@@ -37,11 +42,12 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section {
 
-    return 2;
+    return self.cellDatas.count;
 }
 
 
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath {
+   
     // 1 创建cell
     static NSString *ID = @"sexcell";
     UITableViewCell *cell = [tableView dequeueReusableCellWithIdentifier:ID];
@@ -50,13 +56,12 @@
         
     }
     // 2 设置cell
-    NSArray *cellDatas = @[@"男",@"女"];
-    cell.textLabel.text = cellDatas[indexPath.row];
-    NSUserDefaults *defult = [NSUserDefaults standardUserDefaults];
-    NSString *x = [defult objectForKey:RnOldPxKeyX];
-    NSString *y = [defult objectForKey:RnOldPxKeyY];
     
-    if (indexPath.row ==[y integerValue]&& indexPath.section ==[x integerValue]) {
+    cell.textLabel.text = self.cellDatas[indexPath.row];
+    NSUserDefaults *defult = [NSUserDefaults standardUserDefaults];
+    NSString *y = [defult objectForKey:self.cellDatas[0]];
+    
+    if (indexPath.row ==[y integerValue]) {
         cell.accessoryType = UITableViewCellAccessoryCheckmark;
     }else{
         cell.accessoryType = UITableViewCellAccessoryNone;
@@ -77,14 +82,11 @@
     UITableViewCell *cell = [tableView cellForRowAtIndexPath:indexPath];
     cell.accessoryType = UITableViewCellAccessoryCheckmark;
     self.seleIndexpath = indexPath;
-    
-    
-    NSString *x = [NSString stringWithFormat:@"%ld",indexPath.section];
+
     NSString *y = [NSString stringWithFormat:@"%ld",indexPath.row];
-    
     NSUserDefaults *defult = [NSUserDefaults standardUserDefaults];
-    [defult setObject:x forKey:RnOldPxKeyX];
-    [defult setObject:y forKey:RnOldPxKeyY];
+
+    [defult setObject:y forKey: self.cellDatas[0]];
     [defult synchronize];
     
     [self.navigationController popViewControllerAnimated:YES];

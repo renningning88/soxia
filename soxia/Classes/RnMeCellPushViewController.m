@@ -9,7 +9,8 @@
 #import "RnMeCellPushViewController.h"
 #import "RnSettingItemCell.h"
 #import "RnSettingItem.h"
-@interface RnMeCellPushViewController ()<UITableViewDataSource,UITableViewDelegate>
+#import "RnBasicViewController.h"
+@interface RnMeCellPushViewController ()<UITableViewDelegate>
 
 @end
 
@@ -55,9 +56,9 @@
             [self.view addSubview:_picker];
 
         }else if ([self.title isEqualToString:@"学校"]){
-            UITableView *schoolView = [[UITableView alloc] init];
-            schoolView.delegate = self;
-            schoolView.dataSource = self;
+            RnBasicView *schoolView = [RnBasicView basicWithName:@"school.plist"];
+            schoolView.tableView.delegate = self;
+            self.schoolDatas = schoolView.datas;
             self.schoolView = schoolView;
             [self.view addSubview:self.schoolView];
         }
@@ -99,6 +100,13 @@
 
     return self;
 }
+
+- (void)viewWillAppear:(BOOL)animated{
+
+    [super viewWillAppear:animated];
+    [self.schoolView.tableView reloadData];
+
+}
 /** 取消按钮*/
 - (void)closeContent{
     
@@ -131,18 +139,23 @@
 
 }
 
-#pragma mark - tableview 代理 
-- (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section{
+#pragma mark - cell
 
-    return 10;
-}
-
-- (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath{
-
-// 1 创建cell
-    RnSettingItemCell *cell = [RnSettingItemCell cellWithTableView:tableView];
-
+- (void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath{
+       self.navigationItem.rightBarButtonItem.enabled = YES; 
+// 1 取模型
+    NSDictionary *dic = self.schoolDatas[indexPath.row];
+    NSArray *cellArray = [dic objectForKey:@"datas"];
+    RnBasicViewController *cellvc = [[RnBasicViewController alloc] init];
+    RnBasicView *bView = [[RnBasicView alloc] initWithDatas:cellArray];
+    cellvc.bView = bView;
+    cellvc.datas = cellArray;
+    [self.navigationController pushViewController:cellvc animated:YES];
+    NSUserDefaults *defult = [NSUserDefaults standardUserDefaults];
+    NSString *schoolId = [defult objectForKey:RnSchoolID];
+    NSDictionary *obj = cellArray[[schoolId intValue]];
+    self.cellFeild.text = [NSString stringWithFormat:@"%@-%@",[dic objectForKey:@"title"],[obj objectForKey:@"title"]];
     
-    return cell;
 }
+
 @end

@@ -13,7 +13,7 @@
 @property(nonatomic,strong)UIDatePicker *picker;
 @property(nonatomic, strong)UITextField *cellFeild;
 @property (nonatomic, strong)UIView *cellView;
-@property (nonatomic, strong)UITableView *schoolView;
+@property (nonatomic, strong)RnBasicView *schoolView;
 - (instancetype)initWithTitle:(NSString *)title;
 
 @property(nonatomic,strong)NSArray *schoolDatas;

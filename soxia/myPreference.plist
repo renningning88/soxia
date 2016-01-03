@@ -6,7 +6,7 @@
 		<key>icon</key>
 		<string></string>
 		<key>title</key>
-		<string>北京</string>
+		<string>音乐偏好</string>
 		<key>detail</key>
 		<string></string>
 		<key>type</key>
@@ -17,31 +17,21 @@
 				<key>icon</key>
 				<string></string>
 				<key>title</key>
-				<string>北京大学</string>
+				<string>曲风偏好</string>
 				<key>detail</key>
 				<string></string>
 				<key>type</key>
-				<string></string>
+				<string>ArrowItem</string>
 			</dict>
 			<dict>
 				<key>icon</key>
 				<string></string>
 				<key>title</key>
-				<string>清华大学</string>
+				<string>歌手偏好</string>
 				<key>detail</key>
 				<string></string>
 				<key>type</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>icon</key>
-				<string></string>
-				<key>title</key>
-				<string>北京师范大学</string>
-				<key>detail</key>
-				<string></string>
-				<key>type</key>
-				<string></string>
+				<string>ArrowItem</string>
 			</dict>
 		</array>
 	</dict>
@@ -49,7 +39,7 @@
 		<key>icon</key>
 		<string></string>
 		<key>title</key>
-		<string>天津</string>
+		<string>新闻偏好</string>
 		<key>detail</key>
 		<string></string>
 		<key>type</key>
@@ -60,31 +50,31 @@
 				<key>icon</key>
 				<string></string>
 				<key>title</key>
-				<string>北京大学</string>
+				<string>国内</string>
 				<key>detail</key>
 				<string></string>
 				<key>type</key>
-				<string></string>
+				<string>ArrowItem</string>
 			</dict>
 			<dict>
 				<key>icon</key>
 				<string></string>
 				<key>title</key>
-				<string>清华大学</string>
+				<string>财经</string>
 				<key>detail</key>
 				<string></string>
 				<key>type</key>
-				<string></string>
+				<string>ArrowItem</string>
 			</dict>
 			<dict>
 				<key>icon</key>
 				<string></string>
 				<key>title</key>
-				<string>北京师范大学</string>
+				<string>娱乐</string>
 				<key>detail</key>
 				<string></string>
 				<key>type</key>
-				<string></string>
+				<string>ArrowItem</string>
 			</dict>
 		</array>
 	</dict>
@@ -92,7 +82,7 @@
 		<key>icon</key>
 		<string></string>
 		<key>title</key>
-		<string>河北</string>
+		<string>段子偏好</string>
 		<key>detail</key>
 		<string></string>
 		<key>type</key>
@@ -103,31 +93,31 @@
 				<key>icon</key>
 				<string></string>
 				<key>title</key>
-				<string>北京大学</string>
+				<string>荤段子</string>
 				<key>detail</key>
 				<string></string>
 				<key>type</key>
-				<string></string>
+				<string>ArrowItem</string>
 			</dict>
 			<dict>
 				<key>icon</key>
 				<string></string>
 				<key>title</key>
-				<string>清华大学</string>
+				<string>冷笑话</string>
 				<key>detail</key>
 				<string></string>
 				<key>type</key>
-				<string></string>
+				<string>ArrowItem</string>
 			</dict>
 			<dict>
 				<key>icon</key>
 				<string></string>
 				<key>title</key>
-				<string>北京师范大学</string>
+				<string>爆笑</string>
 				<key>detail</key>
 				<string></string>
 				<key>type</key>
-				<string></string>
+				<string>ArrowItem</string>
 			</dict>
 		</array>
 	</dict>
@@ -135,7 +125,7 @@
 		<key>icon</key>
 		<string></string>
 		<key>title</key>
-		<string>山东</string>
+		<string>个人偏好</string>
 		<key>detail</key>
 		<string></string>
 		<key>type</key>
@@ -146,74 +136,31 @@
 				<key>icon</key>
 				<string></string>
 				<key>title</key>
-				<string>北京大学</string>
+				<string>动漫</string>
 				<key>detail</key>
 				<string></string>
 				<key>type</key>
-				<string></string>
+				<string>ArrowItem</string>
 			</dict>
 			<dict>
 				<key>icon</key>
 				<string></string>
 				<key>title</key>
-				<string>清华大学</string>
+				<string>NBA</string>
 				<key>detail</key>
 				<string></string>
 				<key>type</key>
-				<string></string>
+				<string>ArrowItem</string>
 			</dict>
 			<dict>
 				<key>icon</key>
 				<string></string>
 				<key>title</key>
-				<string>北京师范大学</string>
+				<string>聊天</string>
 				<key>detail</key>
 				<string></string>
 				<key>type</key>
-				<string></string>
-			</dict>
-		</array>
-	</dict>
-	<dict>
-		<key>icon</key>
-		<string></string>
-		<key>title</key>
-		<string>广东</string>
-		<key>detail</key>
-		<string></string>
-		<key>type</key>
-		<string>ArrowItem</string>
-		<key>datas</key>
-		<array>
-			<dict>
-				<key>icon</key>
-				<string></string>
-				<key>title</key>
-				<string>北京大学</string>
-				<key>detail</key>
-				<string></string>
-				<key>type</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>icon</key>
-				<string></string>
-				<key>title</key>
-				<string>清华大学</string>
-				<key>detail</key>
-				<string></string>
-				<key>type</key>
-				<string></string>
-			</dict>
-			<dict>
-				<key>icon</key>
-				<string></string>
-				<key>title</key>
-				<string>北京师范大学</string>
-				<key>detail</key>
-				<string></string>
-				<key>type</key>
-				<string></string>
+				<string>ArrowItem</string>
 			</dict>
 		</array>
 	</dict>

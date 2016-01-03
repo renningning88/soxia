@@ -9,6 +9,11 @@
 #import "RnMeSettingViewController.h"
 #import "RnSettingItem.h"
 #import "RnSettingItemCell.h"
+#import "RnMeInfoViewController.h"
+#import "RnBasicView.h"
+#import "RnBasicViewController.h"
+#import "RnDeviceSettingViewController.h"
+#import "RnAboutAppSettingViewController.h"
 @interface RnMeSettingViewController ()
 
 @end
@@ -53,7 +58,6 @@
     }
  
 }
-
 
 
 @end

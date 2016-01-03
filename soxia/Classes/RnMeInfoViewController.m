@@ -49,7 +49,8 @@ static  id loadname;
     NSUserDefaults *defult = [NSUserDefaults standardUserDefaults];
     NSString *text = [defult objectForKey:cell.textLabel.text];
 //    NSString *name =[defult objectForKey:@"name"];
-    NSString *y = [defult objectForKey:RnOldPxKeyY];
+     NSArray *cellDatas = @[@"男",@"女"];
+    NSString *y = [defult objectForKey:cellDatas[0]];
     if (indexPath.section == 0 ) {
         if ( indexPath.row == 0) {
             cell.detailTextLabel.backgroundColor = [UIColor colorWithPatternImage:[UIImage imageNamed:item.detail]];
@@ -59,7 +60,7 @@ static  id loadname;
         }else if (indexPath.row ==1||indexPath.row ==2){
             cell.detailTextLabel.text =text;
         }else if (indexPath.row ==3){
-            NSArray *cellDatas = @[@"男",@"女"];
+           
             int num = [y intValue];
             cell.detailTextLabel.text = cellDatas[num];
         }
@@ -80,7 +81,8 @@ static  id loadname;
             RnMeCellPushViewController *vc = [[RnMeCellPushViewController alloc] initWithTitle:cell.textLabel.text];
             [self.navigationController pushViewController:vc animated:YES];
         }else if (indexPath.row == 3){
-            RnMeSexSettingViewController *vc03 = [[RnMeSexSettingViewController alloc] init];
+            NSArray *cellDatas = @[@"男",@"女"];
+            RnMeSexSettingViewController *vc03 = [[RnMeSexSettingViewController alloc] initWithDatas:cellDatas];
             [self.navigationController pushViewController:vc03 animated:YES];
         }
     }else {
